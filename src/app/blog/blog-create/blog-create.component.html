@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-sm-2">
+  </div>
+  <div class="col-sm-7">
+    <form (submit)="onPostBlog(postForm)" #postForm="ngForm">
+      <h3>Create your own Blog </h3>
+      <mat-form-field>
+        <input
+         type="text"
+         matInput
+         name="title"
+         [ngModel]="blog?.title"
+         placeholder="Blog Title"
+         #title="ngModel">
+      </mat-form-field>
+      <mat-form-field>
+        <textarea
+         matInput
+         name="content"
+         rows="3"
+         [ngModel]="blog?.content"
+         placeholder="Blog  Content"
+         #content="ngModel"></textarea>
+      </mat-form-field>
+      <br>
+      <button mat-raised-button color="primary" type="submit">Post</button>&nbsp;
+      <button mat-raised-button color="accent" type="reset">Reset</button>
+    </form>
+  </div>
+  <div class="col-sm-3">
+  </div>
+</div>

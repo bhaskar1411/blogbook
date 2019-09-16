@@ -1,0 +1,24 @@
+<form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+  <h3>Enter your login credentials!!!</h3>
+  <mat-form-field>
+    <input
+     type="email"
+     matInput
+     name="email"
+     ngModel
+     placeholder="Enter Registered Email"
+     #email="ngModel" required email>
+  </mat-form-field>
+  <mat-form-field>
+    <input
+     matInput
+     type="password"
+     name="password"
+     ngModel
+     placeholder="Enter Password"
+     #password="ngModel" required>
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" type="submit">Login</button>&nbsp;
+  <button mat-raised-button color="accent" type="reset">Reset</button>
+</form>

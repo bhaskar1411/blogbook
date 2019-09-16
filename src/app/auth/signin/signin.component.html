@@ -1,0 +1,33 @@
+<form (submit)="onSignup(signupForm)" #signupForm="ngForm">
+  <h3>New User? Register Here!!!</h3>
+  <mat-form-field>
+    <input
+     type="text"
+     matInput
+     name="name"
+     ngModel
+     placeholder="Enter Full Name"
+     #name="ngModel" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input
+     type="email"
+     matInput
+     name="email"
+     ngModel
+     placeholder="Enter a valid Email"
+     #email="ngModel" required email>
+  </mat-form-field>
+  <mat-form-field>
+    <input
+     matInput
+     type="password"
+     name="password"
+     ngModel
+     placeholder="Enter Password"
+     #password="ngModel" required>
+  </mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" type="submit">Signin</button>&nbsp;
+  <button mat-raised-button color="accent" type="reset">Reset</button>
+</form>
